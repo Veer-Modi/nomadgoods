@@ -1,0 +1,923 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: black;
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #F2F2F2;
+}
+
+header {
+    position: sticky;
+    z-index: 2;
+}
+
+
+.navbar {
+    background: white;
+    z-index: 1;
+    margin: 3vh 5vh 5vh 5vh;
+    height: 7vh;
+    border-radius: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 95vw;
+    padding: 7px 0 0 0;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vw;
+    font-weight: 700;
+}
+
+.bg {
+    background: url(https://cdn.shopify.com/s/files/1/0384/6721/files/English_Tan_D_9677f0ba-3a7c-4bf3-869d-48f62f39a2ad.jpg?v=1730220239&width=2000&height=831&crop=center);
+    background-repeat: no-repeat;
+    background-size: 100vw 99.45vh;
+    height: 99.45vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 50vw;
+}
+
+.nav {
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.acc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2vh;
+}
+
+ul {
+    list-style: none;
+}
+
+.bg>div:nth-child(1) {
+    background: #B6793E;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.3rem;
+    border-radius: 1vh;
+    font-stretch: extra-expanded;
+    width: 8vh;
+    text-align: center;
+}
+
+.bg>div:nth-child(2) {
+    font-size: 5rem;
+    font-weight: 1000;
+    font-stretch: extra-expanded;
+}
+
+.bg>div:nth-child(3) {
+    font-size: 2rem;
+    font-weight: 1000;
+    font-stretch: extra-expanded;
+}
+
+.bg>div:nth-child(4) {
+    background: white;
+    color: black;
+    font-weight: 700;
+    border-radius: 1vh;
+    width: 5vw;
+    padding: 2vh;
+    margin-top: 2vh;
+    text-align: center;
+}
+
+.title {
+    margin: 5vh 0 0 30vw;
+}
+
+.title>span {
+    font-weight: bolder;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+.title>span:nth-child(1) {
+    margin-left: 6vw;
+}
+
+.title>p {
+    font-weight: 1000;
+    font-size: 4rem;
+    margin-top: -1px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.assets {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -5vh;
+}
+
+.assets>div {
+    height: 50vh;
+    width: 22vw;
+    border-radius: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 1000;
+    padding-bottom: 2vh;
+    color: white;
+    box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
+    cursor: pointer;
+}
+
+.assets>div:nth-child(1) {
+    background: url(https://cdn.shopify.com/s/files/1/0384/6721/files/SRC_20240806_0342-_1_ccb87845-63ec-407b-9bff-f7c1bfaea44d.png?v=1725844319&width=2000&height=1334&crop=center);
+    background-repeat: no-repeat;
+    background-size: 30vw 60vh;
+    background-position: -5vw;
+}
+
+.assets>div:nth-child(2) {
+    background: url(https://cdn.shopify.com/s/files/1/0384/6721/files/SRC_20240813_3213.jpg?v=1729108452&width=2000&height=2637&crop=center);
+    background-repeat: no-repeat;
+    background-size: 23vw 60vh;
+}
+
+.assets>div:nth-child(3) {
+    background: url(https://cdn.shopify.com/s/files/1/0384/6721/files/sport-band-stone-iphone-16-pro-max-stone-case-banner.jpg?v=1727202625&width=2000&height=2556&crop=center);
+    background-repeat: no-repeat;
+    background-size: 23vw 60vh;
+}
+
+.assets>div:nth-child(4) {
+    background: url(https://cdn.shopify.com/s/files/1/0384/6721/files/rugged-band-rocky-point-apple-watch-banner.jpg?v=1727203095&width=2000&height=2527&crop=center);
+    background-repeat: no-repeat;
+    background-size: 30vw 60vh;
+    background-position: -5vw;
+}
+
+.sec-card {
+    background: url(https://cdn.shopify.com/s/files/1/0384/6721/files/blk_a359c62d-04e2-4072-95f2-91ad7719b0fd.jpg?v=1728403114&width=2000&height=909&crop=center);
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: 95vw 90vh;
+    width: 95vw;
+    margin: 4vh;
+    border-radius: 3vh;
+    color: white;
+    box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
+    cursor: pointer;
+}
+
+.sec-card div {
+    margin: 0 0 0 5vw;
+}
+
+.sec-card>div:nth-child(1) {
+    font-size: 2rem;
+    font-weight: 1000;
+    font-stretch: extra-expanded;
+    margin: 35vh 0 0 5vw;
+}
+
+.sec-card>div:nth-child(2) {
+    font-size: 5rem;
+    font-weight: 1000;
+    font-stretch: extra-expanded;
+}
+
+.sec-card>div:nth-child(3) {
+    background: white;
+    color: black;
+    font-weight: 700;
+    border-radius: 1vh;
+    width: 5vw;
+    padding: 2vh;
+    margin-top: 2vh;
+    text-align: center;
+}
+
+.rd-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    height: 90vh;
+    box-shadow: 0 0 1vh rgba(0, 0, 0, 0.285);
+    cursor: pointer;
+    margin: 0 0 0 4vh;
+    border-radius: 3vh;
+}
+
+.iphone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 5vw;
+}
+
+.iphone>div:nth-child(1) {
+    font-size: 2rem;
+    font-weight: 1000;
+    font-stretch: extra-expanded;
+
+}
+
+.iphone>div:nth-child(2) {
+    font-size: 5rem;
+    font-weight: 1000;
+    font-stretch: extra-expanded;
+
+}
+
+.iphone>div:nth-child(3) {
+    font-size: 5rem;
+    font-weight: 1000;
+    font-stretch: extra-expanded;
+
+}
+
+.iphone>div:nth-child(4) {
+    background: black;
+    color: white;
+    font-weight: 700;
+    border-radius: 1vh;
+    width: 5vw;
+    padding: 2vh;
+    margin-top: 2vh;
+    text-align: center;
+}
+
+.img>img {
+    width: 50vw;
+    height: 90vh;
+    border-radius: 0 2vh 2vh 0;
+    top: 3px;
+    position: relative;
+}
+
+.essential-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 1000;
+    margin: 10vh 0 0 0;
+}
+
+.essential {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.essential>div {
+    width: 25vw;
+    height: 55vh;
+    background-color: white;
+    margin: 2vh;
+    border-radius: 2vh;
+    cursor: pointer;
+    box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
+}
+
+.bgcol {
+    background-color: #F2F2F2;
+    width: 23vw;
+    height: 38vh;
+    margin: 2vh;
+    border-radius: 2vh;
+}
+
+.ess-title {
+    margin: 1vh 0 0 1vw;
+    font-size: 1.5rem;
+    font-weight: 1000;
+}
+
+.des {
+    font-size: 0.8rem;
+    margin: -2vh 0 0 1vw;
+}
+
+.color {
+    display: flex;
+    justify-content: space-between;
+    width: 4vw;
+}
+
+.col {
+    display: flex;
+    justify-content: space-between;
+    width: 12vw;
+}
+
+.black {
+    background-color: black;
+    border-radius: 100%;
+    width: 1vw;
+    height: 1vw;
+    margin: 0 0 0 1vw;
+}
+
+.gray {
+    background-color: silver;
+    border-radius: 100%;
+    width: 1vw;
+    height: 1vw;
+    margin: 0 0 0 1vw;
+}
+
+.orange {
+    background-color: #FF5A00;
+    border-radius: 100%;
+    width: 1vw;
+    height: 1vw;
+    margin: 0 0 0 1vw;
+}
+
+.blue {
+    background-color: #4C6282;
+    border-radius: 100%;
+    width: 1vw;
+    height: 1vw;
+    margin: 0 0 0 1vw;
+}
+
+.green {
+    background-color: #4D5245;
+    border-radius: 100%;
+    width: 1vw;
+    height: 1vw;
+    margin: 0 0 0 1vw;
+}
+
+.shop {
+    background: black;
+    color: white;
+    font-weight: 700;
+    border-radius: 1vh;
+    width: 5vw;
+    padding: 2vh;
+    margin-top: 2vh;
+    text-align: center;
+    margin: 3vh 0 0 47vw;
+    cursor: pointer;
+}
+
+.disp {
+    display: flex;
+
+}
+
+.text-con {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 47vw;
+    height: 45vh;
+    border-radius: 3vh 0 0 3vh;
+    box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
+}
+
+.text-con>div {
+    margin: 0 4vw;
+}
+
+.text-con>div:nth-child(1) {
+    font-weight: 900;
+    font-size: 4.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.text-con>div:nth-child(2) {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.text-con>div:nth-child(3) {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+
+.sit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 0 0 0;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 24vw;
+    margin: 2vh 0;
+}
+
+.email>input {
+    background: #f3f3f3;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    height: 41px;
+    padding: 0 1vw;
+    color: black;
+    font-family: Helvetica;
+    width: 14vw;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.email>button {
+    text-decoration: none;
+    background: black;
+    color: white;
+    border-radius: 1vh;
+    padding: 0 1vw;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+.img2>img {
+    height: 45vh;
+    width: 47vw;
+    border-radius: 0 3vh 3vh 0;
+    box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh 0;
+    width: 100%;
+}
+
+.cardcontainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.card-item {
+    width: 30vw;
+    height: 50vh;
+    background: url(https://cdn.shopify.com/s/files/1/0384/6721/files/hand-holding-iphone-15-case-banner.png?v=1727203603&width=2000&height=2612&crop=center);
+    background-repeat: no-repeat;
+    background-size: 35vw 55vh;
+    background-position: -10px 0;
+    border-radius: 3vh;
+    cursor: pointer;
+    box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
+}
+
+.card-item2 {
+    width: 30vw;
+    height: 50vh;
+    background: url(https://cdn.shopify.com/s/files/1/0384/6721/files/hand-holding-kevlar-cable-banner.png?v=1727203753&width=2000&height=2612&crop=center);
+    background-repeat: no-repeat;
+    background-size: 30vw 50vh;
+    border-radius: 3vh;
+    cursor: pointer;
+    box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
+}
+
+.card-item3 {
+    width: 30vw;
+    height: 50vh;
+    background: url(https://cdn.shopify.com/s/files/1/0384/6721/files/hand-holding-airpods-case-banner.png?v=1727203849&width=2000&height=2612&crop=center);
+    background-repeat: no-repeat;
+    background-size: 35vw 55vh;
+    background-position: -10px 0;
+    border-radius: 3vh;
+    cursor: pointer;
+    box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
+}
+
+.textcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    font-weight: 800;
+    font-size: 2rem;
+    margin: -20px;
+}
+
+.ceo {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+}
+
+.stat>h6 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+.stat>p {
+    margin: 0px;
+}
+
+.stat>h4 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    text-align: center;
+}
+
+.leather {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    border-radius: 3vh;
+    cursor: pointer;
+}
+
+.mediacon {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3vh;
+    background: black;
+}
+
+.mediacon>video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+}
+
+.textcon {
+    position: absolute;
+}
+
+.txtitem {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.txtitem>h2 {
+    color: white;
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.lm {
+    text-decoration: none;
+    padding: 1.5vh 1vw;
+    border-radius: 1vh;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    margin: 2vh 0;
+}
+
+.cg {
+    margin: 2vh 0;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.dp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 100%;
+    border-radius: 3vh;
+    overflow: hidden;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.285);
+    cursor: pointer;
+}
+
+.stItem {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.stItem>img {
+    height: 110%;
+    width: 110%;
+}
+
+.fi {
+    margin: 0 8vw 0 0;
+    text-align: center;
+}
+
+.fi>h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.fi>h1 {
+    font-size: 4.2rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.lm2 {
+    text-decoration: none;
+    padding: 1.5vh 1vw;
+    border-radius: 1vh;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.au {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contain {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 49%;
+    height: 100%;
+    background: url(https://cdn.shopify.com/s/files/1/0384/6721/files/Collier_20220924_2278.png?v=1694363628&width=2000&height=1334&crop=center);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3vh;
+    color: white;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.285);
+
+}
+
+.about>h2 {
+    font-weight: 800;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.about>h3 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.commit>h2 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.commit>h3 {
+    font-weight: 800;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.commit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 49%;
+    height: 100%;
+    background: url(https://cdn.shopify.com/s/files/1/0384/6721/files/image-_8.png?v=1694363921&width=2000&height=1334&crop=center);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3vh;
+    color: white;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.285);
+
+}
+
+.footer {
+    width: 100%;
+    height: 75vh;
+    background: url(https://cdn.shopify.com/oxygen-v2/26993/12109/24871/1065860/build/_assets/footer-background-XRPHEXQB.svg);
+    background-repeat: no-repeat;
+    background-size: 115vw 75vh;
+    background-position: 0 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 3vw;
+    row-gap: 2vh;
+}
+
+.bold {
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.grid-item {
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sign {
+    width: 35%;
+    margin: 0 0 9vh 0;
+}
+
+.sign>h6 {
+    font-size: 0.9rem;
+    font-weight: 600;
+
+}
+
+.email2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 24vw;
+    margin: 2vh 0;
+}
+
+.email2>input {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    height: 41px;
+    padding: 0 1vw;
+    color: black;
+    font-family: Helvetica;
+    width: 14vw;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.email2>button {
+    text-decoration: none;
+    background: white;
+    color: black;
+    border-radius: 1vh;
+    padding: 0 1vw;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ndFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin: 4vh 0 2vh 0;
+}
+
+.social {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.social-logo {
+    width: 2vw;
+    cursor: pointer;
+}
+
+.climate {
+    width: 4vw;
+    cursor: pointer;
+}
+
+.hr {
+    background-color: #D3D3D3;
+    width: 100%;
+}
+
+.rdFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+.term-grid {
+    display: grid;
+    grid-template-columns: repeat(11, auto);
+    column-gap: 1vw;
+    width: 50%;
+}
+
+.grayitem{
+    cursor: pointer;
+}
+.country {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 6px;
+}
+
+.im {
+    width: 1vw;
+}
+
+.arrow {
+    width: 1vw;
+}
