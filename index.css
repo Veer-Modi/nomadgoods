@@ -314,6 +314,12 @@ ul {
     border-radius: 2vh;
 }
 
+.bgcol>img{
+    object-fit: contain;
+    aspect-ratio: 3/2;
+    margin: 5vh 0;
+}
+
 .ess-title {
     margin: 1vh 0 0 1vw;
     font-size: 1.5rem;
