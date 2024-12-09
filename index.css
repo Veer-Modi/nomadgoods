@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    position: sticky;
+    position: fixed;
     z-index: 2;
 }
 
@@ -154,6 +154,20 @@ ul {
     color: white;
     box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
     cursor: pointer;
+    animation: appear .8s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+    clip-path: inset(100% 100% 0);
+    }
+    100%{
+        opacity: 1;
+    clip-path: inset(0 0 0);
+    }
 }
 
 .assets>div:nth-child(1) {
@@ -193,6 +207,19 @@ ul {
     color: white;
     box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
     cursor: pointer;
+    animation: play 5s linear 1;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%
+}
+
+@keyframes play {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
 }
 
 .sec-card div {
@@ -232,7 +259,19 @@ ul {
     box-shadow: 0 0 1vh rgba(0, 0, 0, 0.285);
     cursor: pointer;
     margin: 0 0 0 4vh;
-    border-radius: 3vh;
+    border-radius: 3vh;    
+    animation: play2 5s linear 1;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%
+}
+@keyframes play2 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
 }
 
 .iphone {
@@ -304,6 +343,21 @@ ul {
     border-radius: 2vh;
     cursor: pointer;
     box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
+    
+    animation: appear .8s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+    clip-path: inset(100% 100% 0);
+    }
+    100%{
+        opacity: 1;
+    clip-path: inset(0 0 0);
+    }
 }
 
 .bgcol {
@@ -493,6 +547,11 @@ ul {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+}
+
+.cardcontainer>div:hover {
+    transition: all 500ms ease;
+    scale: 1.05;
 }
 
 .card-item {
@@ -735,7 +794,12 @@ ul {
     border-radius: 3vh;
     color: white;
     box-shadow: 0 0 2vh rgba(0, 0, 0, 0.285);
+}
 
+.about:hover{
+    transition: background-position 3000ms ease;
+    background-size: 150% 150%;
+    background-position: 50% 50%;
 }
 
 .about>h2 {
@@ -775,7 +839,12 @@ ul {
     border-radius: 3vh;
     color: white;
     box-shadow: 0 0 2vh rgba(0, 0, 0, 0.285);
+}
 
+.commit:hover{
+    transition: background-position 3s ease-in-out;
+    background-size: 200% 200%;
+    background-position: 50% 50%;
 }
 
 .footer {
