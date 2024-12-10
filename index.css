@@ -11,6 +11,10 @@ body {
     background-color: #F2F2F2;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+  }
+
 header {
     position: fixed;
     z-index: 2;
@@ -30,6 +34,7 @@ header {
     position: absolute;
     width: 95vw;
     padding: 7px 0 0 0;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.604);
 }
 
 .logo {
@@ -42,6 +47,41 @@ header {
     align-items: center;
     width: 40vw;
     font-weight: 700;
+}
+
+.menu>div {
+    position: relative;
+    cursor: pointer;
+}
+
+.menu>div::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    border-radius: 100vw;
+    background-color: black;
+    transform: scale(0, 1);
+    transition: all 0.5s;
+}
+
+.menu>div:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    transform: scale(1, 1);
+    border-radius: 100vw;
+    background-color: black;
+}
+
+.menu>div:hover {
+    transform: translateY(-10%);
+    transition: all 0.5s;
 }
 
 .bg {
@@ -68,6 +108,45 @@ header {
     justify-content: space-between;
     align-items: center;
     column-gap: 2vh;
+}
+
+.acc>li {
+    position: relative;
+    cursor: pointer;
+}
+
+.acc>li:nth-child(1)>svg {
+    margin-left: 5px;
+}
+
+.acc>li::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    border-radius: 100vw;
+    background-color: black;
+    transform: scale(0, 1);
+    transition: all 0.5s;
+}
+
+.acc>li:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    transform: scale(1, 1);
+    border-radius: 100vw;
+    background-color: black;
+}
+
+.acc>li:hover {
+    transform: translateY(-10%);
+    transition: all 0.5s;
 }
 
 ul {
@@ -107,6 +186,17 @@ ul {
     margin-top: 2vh;
     text-align: center;
 }
+
+.bg>div:nth-child(4):hover {
+    background: black;
+    transform: translateX(background -200% -100%);
+    transform: translateY(-10%);
+    box-shadow: 2px 5px 10px rgba(255, 255, 255, 0.5);
+    color: white;
+    transition: all 200ms linear;
+    border-radius: 100vw;
+}
+
 
 .title {
     margin: 5vh 0 0 30vw;
@@ -154,19 +244,20 @@ ul {
     color: white;
     box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
     cursor: pointer;
-    animation: appear .8s linear;
+    animation: appear .8s linear forwards;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
 }
 
 @keyframes appear {
-    0%{
+    0% {
         opacity: 0;
-    clip-path: inset(100% 100% 0);
+        clip-path: inset(100% 100% 0);
     }
-    100%{
+
+    100% {
         opacity: 1;
-    clip-path: inset(0 0 0);
+        clip-path: inset(0 0 0);
     }
 }
 
@@ -207,19 +298,20 @@ ul {
     color: white;
     box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
     cursor: pointer;
-    animation: play 5s linear 1;
+    animation: play 5s linear forwards;
     animation-timeline: view();
     animation-range: entry 0 cover 40%
 }
 
 @keyframes play {
-    0%{
+    0% {
         transform: translateX(-100%);
     }
-    100%{
+
+    100% {
         transform: translateX(0);
     }
-    
+
 }
 
 .sec-card div {
@@ -250,6 +342,16 @@ ul {
     text-align: center;
 }
 
+.sec-card>div:nth-child(3):hover {
+    background: black;
+    transform: translateX(background -200% -100%);
+    transform: translateY(-10%);
+    box-shadow: 2px 5px 10px rgba(255, 255, 255, 0.5);
+    color: white;
+    transition: all 200ms linear;
+    border-radius: 100vw;
+}
+
 .rd-card {
     display: flex;
     justify-content: space-between;
@@ -259,19 +361,21 @@ ul {
     box-shadow: 0 0 1vh rgba(0, 0, 0, 0.285);
     cursor: pointer;
     margin: 0 0 0 4vh;
-    border-radius: 3vh;    
-    animation: play2 5s linear 1;
+    border-radius: 3vh;
+    animation: play2 5s linear forwards;
     animation-timeline: view();
     animation-range: entry 0 cover 40%
 }
+
 @keyframes play2 {
-    0%{
+    0% {
         transform: translateX(100%);
     }
-    100%{
+
+    100% {
         transform: translateX(0);
     }
-    
+
 }
 
 .iphone {
@@ -314,6 +418,17 @@ ul {
     text-align: center;
 }
 
+
+.iphone>div:nth-child(4):hover {
+    background: white;
+    transform: translateX(background -200% -100%);
+    transform: translateY(-10%);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    color: black;
+    transition: all 200ms linear;
+    border-radius: 100vw;
+}
+
 .img>img {
     width: 50vw;
     height: 90vh;
@@ -343,20 +458,20 @@ ul {
     border-radius: 2vh;
     cursor: pointer;
     box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.285);
-    
-    animation: appear .8s linear;
+    animation: appear .8s linear forwards;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
 }
 
 @keyframes appear {
-    0%{
+    0% {
         opacity: 0;
-    clip-path: inset(100% 100% 0);
+        scale: 0.5;
     }
-    100%{
+
+    100% {
         opacity: 1;
-    clip-path: inset(0 0 0);
+        scale: 1;
     }
 }
 
@@ -368,7 +483,7 @@ ul {
     border-radius: 2vh;
 }
 
-.bgcol>img{
+.bgcol>img {
     object-fit: contain;
     aspect-ratio: 3/2;
     margin: 5vh 0;
@@ -450,6 +565,17 @@ ul {
     cursor: pointer;
 }
 
+.shop:hover {
+    background: white;
+    transform: translateX(background -200% -100%);
+    transform: translateY(-10%);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    color: black;
+    transition: all 200ms linear;
+    border-radius: 100vw;
+
+}
+
 .disp {
     display: flex;
 
@@ -516,6 +642,17 @@ ul {
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.email>input:hover {
+    border: 1px solid black;
+    transform: translateY(-10%);
+    transform: translateX(transform -200% -100%);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: all 200ms linear;
+}
+
+
+
 .email>button {
     text-decoration: none;
     background: black;
@@ -526,6 +663,16 @@ ul {
     font-size: 1rem;
     cursor: pointer;
     border: none;
+}
+
+.email>button:hover {
+    background: white;
+    transform: translateX(background -200% -100%);
+    transform: translateY(-10%);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    color: black;
+    transition: all 200ms linear;
+    border-radius: 100vw;
 }
 
 .img2>img {
@@ -701,6 +848,17 @@ ul {
     font-size: 1.1rem;
     border: none;
     margin: 2vh 0;
+    background: white;
+}
+
+.lm:hover {
+    background: black;
+    transform: translateX(background -200% -100%);
+    transform: translateY(-10%);
+    box-shadow: 2px 5px 10px rgba(255, 255, 255, 0.5);
+    color: white;
+    transition: all 200ms linear;
+    border-radius: 100vw;
 }
 
 .cg {
@@ -763,6 +921,17 @@ ul {
     border: none;
     background-color: black;
     color: white;
+    cursor: pointer;
+}
+
+.lm2:hover {
+    background: white;
+    transform: translateX(background -200% -100%);
+    transform: translateY(-10%);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    color: black;
+    transition: all 300ms linear;
+    border-radius: 100vw;
 }
 
 .au {
@@ -796,7 +965,7 @@ ul {
     box-shadow: 0 0 2vh rgba(0, 0, 0, 0.285);
 }
 
-.about:hover{
+.about:hover {
     transition: background-position 3000ms ease;
     background-size: 150% 150%;
     background-position: 50% 50%;
@@ -841,7 +1010,7 @@ ul {
     box-shadow: 0 0 2vh rgba(0, 0, 0, 0.285);
 }
 
-.commit:hover{
+.commit:hover {
     transition: background-position 3s ease-in-out;
     background-size: 200% 200%;
     background-position: 50% 50%;
@@ -890,6 +1059,43 @@ ul {
     cursor: pointer;
 }
 
+.grid-item {
+    position: relative;
+    width: max-content;
+}
+
+.grid-item::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    border-radius: 100vw;
+    background-color: black;
+    transform: scale(0, 1);
+    transition: all 0.5s;
+}
+
+.grid-item:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    transform: scale(1, 1);
+    border-radius: 100vw;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+.grid-item:hover {
+    transform: translateY(-10%);
+    transition: all 0.5s;
+}
+
+
 .sign {
     width: 35%;
     margin: 0 0 9vh 0;
@@ -921,6 +1127,15 @@ ul {
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.email2>input:hover {
+    border: 1px solid black;
+    transform: translateY(-10%);
+    transform: translateX(transform -200% -100%);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: all 200ms linear;
+}
+
 .email2>button {
     text-decoration: none;
     background: white;
@@ -932,6 +1147,15 @@ ul {
     cursor: pointer;
     border: none;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.email2>button:hover {
+    background: black;
+    transform: translateX(background -200% -100%);
+    transform: translateY(-10%);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: all 200ms linear;
 }
 
 .ndFooter {
@@ -980,9 +1204,10 @@ ul {
     width: 50%;
 }
 
-.grayitem{
+.grayitem {
     cursor: pointer;
 }
+
 .country {
     display: grid;
     grid-template-columns: repeat(3, auto);
